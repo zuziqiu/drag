@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div class="container">
+            <div id="mov_id_1" class="" style="top:0px; left: 20px; position: fixed; width: 250px; height: 250px; background: #000" >
+                <div class="handle_class_1" id="handle_id_1" style="background: red; height: 30px;"></div>
+            </div>
+        </div>
+
+        <div id="" class="mov_class_2" style="top:200px; left: 200px; position: fixed; width: 250px; height: 250px; background: #d5d5d5" >
+            <div class="handle_class_2" id="handle_id_2" style="background: blue; height: 30px;"></div>
+        </div>
+
+        <div id="" class="mov_class_3" style="top:400px; left: 600px; position: fixed; width: 250px; height: 250px; background: #454644" >
+            <div id="" class="handle_class_3" style="background: #c1ee44; height: 30px;"></div>
+        </div>
+        
+        <div id="mov_id_4" class="" style="top:600px; left: 300px; position: fixed; width: 250px; height: 250px; background: #444892" >
+            <div id="handle_id_4" class="handle_class_4"  style="background: #63c073; height: 30px;"></div>
+        </div>
+        <script src="./drag.js"></script>
+        <script type="text/javascript">
+            var _drag = new drag(),
+                element_array = [];
+
+            element_array[0] = {
+                move_pop: document.querySelector("#mov_id_1"),
+                handle: document.querySelector("#mov_id_1"),
+            }
+            element_array[1] = {
+                move_pop: document.querySelector(".mov_class_2"),
+                handle: document.querySelector("#handle_id_2"),
+                backgroundColor: "#eedf09"
+            }
+            element_array[2] = {
+                move_pop: document.querySelector(".mov_class_3"),
+                handle: document.querySelector(".handle_class_3"),
+            }
+            element_array[3] = {
+                move_pop: document.querySelector("#mov_id_4"),
+                handle: document.querySelector(".handle_class_4"),
+            }
+            // 注册
+            _drag.on(element_array); 
+        </script>
+</body>
+</html>
